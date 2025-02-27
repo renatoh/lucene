@@ -63,7 +63,7 @@ public class DictionaryCompoundWordTokenFilterFactory extends TokenFilterFactory
     maxSubwordSize =
         getInt(args, "maxSubwordSize", CompoundWordTokenFilterBase.DEFAULT_MAX_SUBWORD_SIZE);
     onlyLongestMatch = getBoolean(args, "onlyLongestMatch", true);
-    reuseChars = getBoolean(args, "reuseChars", true);
+    reuseChars = getBoolean(args, "reuseChars", false);
     if (!args.isEmpty()) {
       throw new IllegalArgumentException("Unknown parameters: " + args);
     }
