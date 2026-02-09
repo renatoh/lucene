@@ -73,6 +73,8 @@ New Features
 Improvements
 ---------------------
 
+* GITHUB#15682: Use ArrayDeque instead of LinkedList in CompoundWordTokenFilterBase.java. (Renato Haeberli)
+
 * GITHUB#15568: Add markdown support for javadocs and modernize highlighting a bit. (Dawid Weiss)
 
 * GITHUB#14972: Require named thread factory in ThreadPoolExecutor constructors. (Dawid Weiss)
