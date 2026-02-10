@@ -192,7 +192,7 @@ public class SimpleNaiveBayesClassifier implements Classifier<BytesRef> {
    * @throws IOException if tokenization fails
    */
   protected String[] tokenize(String text) throws IOException {
-    Collection<String> result = new LinkedList<>();
+    Collection<String> result = new ArrayList<>();
     for (String textFieldName : textFieldNames) {
       try (TokenStream tokenStream = analyzer.tokenStream(textFieldName, text)) {
         CharTermAttribute charTermAttribute = tokenStream.addAttribute(CharTermAttribute.class);

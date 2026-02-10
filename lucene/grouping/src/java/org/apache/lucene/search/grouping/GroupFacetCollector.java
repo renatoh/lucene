@@ -182,7 +182,7 @@ public abstract class GroupFacetCollector extends SimpleCollector {
      * @return a list of facet entries to be rendered based on the specified offset and limit
      */
     public List<FacetEntry> getFacetEntries(int offset, int limit) {
-      List<FacetEntry> entries = new LinkedList<>();
+      List<FacetEntry> entries = new ArrayList<>();
 
       int skipped = 0;
       int included = 0;

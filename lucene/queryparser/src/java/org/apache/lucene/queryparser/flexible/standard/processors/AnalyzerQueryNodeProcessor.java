@@ -187,7 +187,7 @@ public class AnalyzerQueryNodeProcessor extends QueryNodeProcessorImpl {
 
             if (positionCount == 1) {
               // simple case: only one position, with synonyms
-              LinkedList<QueryNode> children = new LinkedList<>();
+              List<QueryNode> children = new ArrayList<>();
 
               for (int i = 0; i < numTokens; i++) {
                 String term = null;

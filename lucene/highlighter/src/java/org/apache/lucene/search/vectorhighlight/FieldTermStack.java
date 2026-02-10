@@ -20,6 +20,7 @@ import java.io.IOException;
 import java.util.Collections;
 import java.util.Iterator;
 import java.util.LinkedList;
+import java.util.List;
 import java.util.Set;
 import org.apache.lucene.index.Fields;
 import org.apache.lucene.index.IndexReader;
@@ -37,7 +38,7 @@ import org.apache.lucene.util.CharsRefBuilder;
 public class FieldTermStack {
 
   private final String fieldName;
-  LinkedList<TermInfo> termList = new LinkedList<>();
+  List<TermInfo> termList = new LinkedList<>();
 
   /**
    * a constructor.

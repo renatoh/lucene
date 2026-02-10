@@ -154,7 +154,7 @@ public class SimpleNaiveBayesDocumentClassifier extends SimpleNaiveBayesClassifi
     for (int i = 0; i < textFieldNames.length; i++) {
       String fieldName = textFieldNames[i];
       float boost = 1;
-      List<String[]> tokenizedValues = new LinkedList<>();
+      List<String[]> tokenizedValues = new ArrayList<>();
       if (fieldName.contains("^")) {
         String[] field2boost = fieldName.split("\\^");
         fieldName = field2boost[0];
@@ -180,7 +180,7 @@ public class SimpleNaiveBayesDocumentClassifier extends SimpleNaiveBayesClassifi
    * @throws java.io.IOException If tokenization fails because there is a low-level I/O error
    */
   protected String[] getTokenArray(TokenStream tokenizedText) throws IOException {
-    Collection<String> tokens = new LinkedList<>();
+    Collection<String> tokens = new ArrayList<>();
     CharTermAttribute charTermAttribute = tokenizedText.addAttribute(CharTermAttribute.class);
     tokenizedText.reset();
     while (tokenizedText.incrementToken()) {

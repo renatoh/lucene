@@ -728,7 +728,7 @@ public class TestFlattenGraphFilter extends BaseTokenStreamTestCase {
    */
   public void testPathsNotLost() throws IOException {
     int wordCount = random().nextInt(5) + 5;
-    List<BytesRef> acceptStrings = new LinkedList<>();
+    List<BytesRef> acceptStrings = new ArrayList<>();
     for (int i = 0; i < wordCount; i++) {
       int wordLen = random().nextInt(5) + 5;
       BytesRef ref = new BytesRef(wordLen);
