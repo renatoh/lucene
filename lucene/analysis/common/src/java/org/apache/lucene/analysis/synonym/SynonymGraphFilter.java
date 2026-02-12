@@ -19,6 +19,7 @@ package org.apache.lucene.analysis.synonym;
 
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.List;
 import org.apache.lucene.analysis.TokenFilter;
 import org.apache.lucene.analysis.TokenStream;
@@ -95,7 +96,7 @@ public final class SynonymGraphFilter extends TokenFilter {
   private final ByteArrayDataInput bytesReader = new ByteArrayDataInput();
   private final BytesRef scratchBytes = new BytesRef();
   private final CharsRefBuilder scratchChars = new CharsRefBuilder();
-  private final List<BufferedOutputToken> outputBuffer = new ArrayList<>();
+  private final LinkedList<BufferedOutputToken> outputBuffer = new LinkedList<>();
 
   private int nextNodeOut;
   private int lastNodeOut;
@@ -240,7 +241,7 @@ public final class SynonymGraphFilter extends TokenFilter {
   private void releaseBufferedToken() throws IOException {
     // System.out.println("  releaseBufferedToken");
 
-    BufferedOutputToken token = outputBuffer.removeFirst();
+    BufferedOutputToken token = outputBuffer.pollFirst();
 
     if (token.state != null) {
       // This is an original input token (keepOrig=true case):
