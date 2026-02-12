@@ -18,6 +18,7 @@ package org.apache.lucene.util;
 
 import com.carrotsearch.randomizedtesting.generators.RandomNumbers;
 import java.util.ArrayList;
+import java.util.List;
 import org.apache.lucene.tests.util.LuceneTestCase;
 import org.apache.lucene.tests.util.LuceneTestCase.Nightly;
 import org.apache.lucene.util.packed.PackedInts;

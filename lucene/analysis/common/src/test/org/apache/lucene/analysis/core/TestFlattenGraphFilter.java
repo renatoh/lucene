@@ -20,6 +20,7 @@ package org.apache.lucene.analysis.core;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Comparator;
+import java.util.List;
 import java.util.Random;
 import org.apache.lucene.analysis.Analyzer;
 import org.apache.lucene.analysis.AutomatonToTokenStream;

@@ -54,7 +54,7 @@ public class MultiPhraseQueryNodeBuilder implements StandardQueryBuilder {
 
         List<Term> termList =
             positionTermMap.computeIfAbsent(
-                termNode.getPositionIncrement(), k -> new ArrayList<>());
+                termNode.getPositionIncrement(), _ -> new ArrayList<>());
 
         termList.add(termQuery.getTerm());
       }

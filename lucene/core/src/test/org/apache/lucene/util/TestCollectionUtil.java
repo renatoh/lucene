@@ -19,6 +19,7 @@ package org.apache.lucene.util;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
+import java.util.List;
 import java.util.Random;
 import org.apache.lucene.tests.util.LuceneTestCase;
 
